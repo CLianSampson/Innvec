@@ -46,7 +46,7 @@ $(document).ready(function(){
 	 $("#rightaddress").hide();
   	 $("#rightjobs").fadeIn();
   	
-	$("#jobs").mousemove(function(){
+	$("#jobs").click(function(){
 		 $("#jobs").css("color","rgb(36,144,235)");
 		 
 		 $("#welfare").css("color","gray");
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	});
   
   
-  	$("#welfare").mousemove(function(){
+  	$("#welfare").click(function(){
   		$("#welfare").css("color","rgb(36,144,235)");
   		
   		 $("#jobs").css("color","gray");
@@ -73,7 +73,7 @@ $(document).ready(function(){
 		 $("#rightwelfare").fadeIn();
   	});
   	
-  	$("#contacts").mousemove(function(){
+  	$("#contacts").click(function(){
   		$("#contacts").css("color","rgb(36,144,235)");
   		
   		 $("#welfare").css("color","gray");
@@ -86,7 +86,7 @@ $(document).ready(function(){
 		 $("#rightcontacts").fadeIn();
   	});
   	
-  	$("#address").mousemove(function(){
+  	$("#address").click(function(){
   		$("#address").css("color","rgb(36,144,235)");
   		
   		 $("#welfare").css("color","gray");

@@ -6,7 +6,8 @@
  }
  
  body{
- 	min-height:100%;position:relative;
+ 	min-height:100%;
+ 	position:relative;
 	padding-bottom: 100px;
  }
  
@@ -60,6 +61,14 @@ p{
  	background: #f2f2f2;
  	text-align: center;
  }
+ 
+ /*大于550px*/
+@media only screen and (min-width: 550px){
+	#nav{
+	 	text-align: left;
+ 	}
+}
+ 
  #logo{
  	margin-top: 10px;
  	margin-left:40px ;
@@ -102,7 +111,7 @@ p{
  
 #banner{
 	width: 100%;
-	height: 350px;
+	height: 345px;
 }
 
 #leftDiv{
@@ -112,16 +121,15 @@ p{
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
-	border-right-style: solid;
-	border-right-color: lightgrey;
-	border-right-width: 10px;
 }
 
+/* background: #F2F2F2; */
 #middleSepreate{
 	width:0;
 	background: #F2F2F2;
-	height: 400px;
+	height: 100px;
 	display: inline-block;
+	
 }
 
 #rightDiv{
@@ -134,19 +142,28 @@ p{
 	color: rgb(111,111,111);
 	vertical-align: top;
 	position: relative;
+	
+	
+	border-left-style: solid;
+	border-left-color: #F2F2F2;
+	border-left-width: 10px;
 }
 
 #jobs{
 	color: rgb(36,144,235);
+	cursor: pointer;
 }
 #welfare{
 	color: gray;
+	cursor: pointer;
 }
 #contacts{
 	color: gray;
+	cursor: pointer;
 }
 #address{
 	color: gray;
+	cursor: pointer;
 }
 
 
@@ -159,6 +176,10 @@ p{
 	height: 100%; 
 	font-size: 12px;
 	position: relative;
+}
+
+#rightjobs{
+	height: 400px;
 }
 
 /*大于550px*/
@@ -175,6 +196,68 @@ p{
             75%  {top: 160px;}
             100% {top: 200px;}
      }
-
 }
+
+
+
+/*大于550px*/
+@media only screen and (min-width: 550px){
+	#map{
+		width: 50%;
+		height: 400px;
+		display: inline-block;
+	}
+	
+	#rightaddress-sp{
+		width: 3%;
+		height: 400px;
+		display: inline-block;
+	}
+	
+	#rightaddress-adress{
+		width: 42%;
+		padding-bottom: 0px;
+		padding-left: 5px;
+		border-width: 1px;
+		border-color: gray;
+		border-style: solid;
+		display: inline-block; 
+		vertical-align: bottom;
+	}
+}
+
+/*小于550px*/
+@media only screen and (max-width: 550px){
+	#map{
+		width: 100%;
+		height: 400px;
+		display: block;
+	}
+	
+	#rightaddress-sp{
+		width: 100%;
+		height: 8px;
+		display: block;
+	}
+	
+	#rightaddress-adress{
+		width: 100%;
+		border-width: 1px;
+		border-color: gray;
+		border-style: solid;
+		display: block; 
+		
+		margin-top: 10px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
 

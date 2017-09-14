@@ -7,6 +7,10 @@
 		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		
 		<script type="text/javascript">  
 			function initialize() {  
 			 //初始化地图
@@ -39,9 +43,6 @@
 			   
 			window.onload = loadScript;  
 		</script>  
-		
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
 		
 	</head>
 	
@@ -103,7 +104,7 @@
 					<p><strong>薪资：</strong>（薪资结构：底薪+加班费+夜班/岗位津贴+生产奖金</p>
 					<p>1、底薪：2400元/月（含全勤奖100元/月）；2、加班费：平时：19.8元/小时；双休日：26.4元/小时；国定假日：39.7元/小时；3、夜班津贴：15元/夜；4、岗位津贴：0-800元/月。</p>
 					<p><strong>月综合收入：</strong>3000-6000元/月。</p>
-					<div id="rightWelcome" style="position: relative; text-align: center;  color: red; font-size: 15px; ">
+					<div id="rightWelcome" style="position: relative; text-align: center;  color: red; font-size: 15px; margin-top: 15px;">
 						<span direction="down">我们诚挚欢迎各位有志之士加入英业达大家庭</span>
 					</div>
 				  </div>
@@ -125,18 +126,16 @@
 					</div>
 				 </div>
 			
-				 <div id="rightcontacts" style="text-align: center;">
-				 	  <div style="background: white; display: inline-block; width: 20px;">
-					  </div>
-					  <div style="background: white; display: inline-block; padding: 15px; border-width:2px ; border-color: navajowhite; border-style: solid;text-align: center; vertical-align: top;margin-top: 110px;">
+				 <div id="rightcontacts" style="text-align: center; vertical-align: middle;">
+				 	
+					  <div style="background: white; padding: 15px; border-width:2px ; border-color: navajowhite; border-style: solid;text-align: center; ">
 					  	<span>联系我们</span>
 					  	<p style="height: 30px;"></p>
 					  	<span><strong>公司邮箱:</strong></span>	&nbsp;&nbsp;<span style="font-size: 14px; color: red;">hr@inventec.cc</span><br />
 					  	<span><strong>联系电话:</strong></span>  &nbsp;&nbsp;<span style="font-size: 14px; color: red;">18816625293&nbsp;&nbsp;&nbsp;</span>		
 					  </div> 
-					  <div style="background: white; display: inline-block; width: 50px;">
-					  </div>
-					  <div style="background: rgb(232,232,232); display: inline-block; padding-bottom: 20px;">
+					 
+					  <div style="background: rgb(232,232,232); display: inline-block; padding-bottom: 20px; margin-right: 30px; margin-left: 30px;">
 					  	<div style="background: white; height: 30px;"></div>
 					  	<div style=" display: inline-block; text-align: center;">
 					  			<span style="background: rgb(21,135,215); padding: 5px; color: white">请留下您的联系方式，我们会尽早与您联系</span><br />
@@ -154,8 +153,7 @@
 							  	<button type="button" style="padding: 8px; background: rgb(21,135,215); border: none;">发送</button>
 					  	</div>
 				 	  </div>
-				 	  <div style="background: white; display: inline-block; width: 100px;">
-					  </div>
+				 	 
 					  <div style="background: white; display: inline-block; padding: 15px; border-width:2px ; border-color: lightgrey; border-style: solid;text-align: center; vertical-align: top;margin-top: 50px;">
 					  	<span>请关注二维码获取最新关于英业达的相关动态</span>
 					  	<p style="height: 10px;"></p>
@@ -164,9 +162,9 @@
 				 </div>
 			
 				 <div id="rightaddress">
-				 	<div id="map" style="width: 50%; height: 400px; display: inline-block;"></div>
-				 	<div style="width: 3%; height: 400px; display: inline-block;"></div>
-				 	<div style="width: 42%; padding-bottom: 0px; padding-left: 5px; border-width: 1px; border-color: gray; border-style: solid; display: inline-block; vertical-align: bottom;">
+				 	<div id="map" ></div>
+				 	<div id="rightaddress-sp"></div>
+				 	<div id="rightaddress-adress">
 				 		<span style="color: rgb(209,100,54);"><b>英业达科技有限公司</b></span><br />
 				 		<div style="height: 5px;"></div>
 				 		<span><strong>地址：</strong>上海市闵行区浦星公路699号（漕河泾出口加工区）</span><br />
