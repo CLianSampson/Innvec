@@ -1,31 +1,37 @@
-
 *{ 
 	margin:0;
  	padding:0;
  	box-sizing: border-box; /**********  设置宽度 为设置的宽度**********/
  }
  
- body{
+body{
  	min-height:100%;
  	position:relative;
-	padding-bottom: 100px;
- }
+	margin-bottom: -100px;
+}
  
- footer{
- 	background: #919191; 
+p{
+    text-indent:2em;    /*每个P段落，首行空出两个空格，即缩进两个字符*/
+}
+
+#blank-footer{
+	height: 100px;
+}
+
+footer{
+ 	/*background: #919191;*/ 
+ 	background: rgb(222,222,222);
  	position: absolute; 
  	bottom: 0; 
  	width: 100%; 
  	height: 100px;
- }
-
-p{
-    text-indent:2em;    /*每个P段落，首行空出两个空格，即缩进两个字符*/
 }
 
 #welcomeDiv{
 	width: 100%;
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #welcomeText{
@@ -57,10 +63,10 @@ p{
 }
 
 
- #nav{
+#nav{
  	background: #f2f2f2;
  	text-align: center;
- }
+}
  
  /*大于550px*/
 @media only screen and (min-width: 550px){
@@ -69,7 +75,7 @@ p{
  	}
 }
  
- #logo{
+#logo{
  	margin-top: 10px;
  	margin-left:40px ;
  	margin-bottom: 10px;
@@ -77,31 +83,22 @@ p{
  
  /*大于550px*/
 @media only screen and (min-width: 550px){
-	#employ{
-	 	position: relative;
-	 	left: 40px;
- 	}
- 	#companyIntroduction{
-	 	position: relative;
-	 	left: 60px;
- 	}
+	#nav-item{
+		display: inline-flex;
+	}
+	#employ, #companyIntroduction{
+		margin-left: 30px;
+	}
 }
 
 @media only screen and (max-width: 550px) {
-	#logo{
-		margin-top: 10px;
- 		margin-left:0px ;
- 		margin-bottom: 10px;
-	}
-	
-	#employ,#companyIntroduction{
-		color: gray;
-		bottom: 10px;
-		display: block;
+	#nav-item{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around
 	}
 }
-
-
 
  a:link 
  {
@@ -109,65 +106,91 @@ p{
     text-decoration:none;
  } 
  
-#banner{
-	width: 100%;
-	height: 345px;
+@media only screen and (min-width: 550px){
+	#banner{
+		width: 100%;
+		height: 345px;
+	}
 }
 
-#leftDiv{
-	width: 15%;
-	height: 400px;
-	background: white;
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
+
+@media only screen and (max-width: 550px) {
+	#banner{
+		width: 100%;
+		height: 170px;
+	}
 }
 
-/* background: #F2F2F2; */
-#middleSepreate{
-	width:0;
-	background: #F2F2F2;
-	height: 100px;
-	display: inline-block;
-	
+
+@media only screen and (min-width: 550px){
+	#middleContainer{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background: rgb(247,247,247);
+		/*图片下方有空白*/
+		margin-top: -5px;
+	}
+	#leftDiv{
+		min-width: 150px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#rightDiv{
+		display: flex;
+		flex-grow: 1;
+		color: rgb(111,111,111);
+		background: white;
+	}
 }
 
-#rightDiv{
-	width: 82%;
-	/*
-	height: 400px;
-	*/
-	background: white;
-	display: inline-block;
-	color: rgb(111,111,111);
-	vertical-align: top;
-	position: relative;
-	
-	
-	border-left-style: solid;
-	border-left-color: #F2F2F2;
-	border-left-width: 10px;
+
+@media only screen and (max-width: 550px) {
+	#middleContainer{
+		width: 100%;
+		height: 100%;
+		/*图片下方有空白*/
+		margin-top: -5px;
+	}
+	#leftDiv{
+		min-width: 150px;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		background: rgb(247,247,247);
+	}
+	#rightDiv{
+		display: flex;
+		color: rgb(111,111,111);
+		background: white;
+	}
 }
 
+
+
+#jobs, #welfare, #contacts, #address{
+	color: gray;
+	cursor: pointer;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+}
 #jobs{
 	color: rgb(36,144,235);
 	cursor: pointer;
 }
-#welfare{
-	color: gray;
-	cursor: pointer;
-}
-#contacts{
-	color: gray;
-	cursor: pointer;
-}
-#address{
-	color: gray;
-	cursor: pointer;
-}
 
 
-#rightjobs,#rightwelfare,#rightcontacts,#rightaddress{
+
+#rightjobs, #rightwelfare, #rightcontacts, #rightaddress{
 	padding-left: 10px; 
 	padding-right: 10px; 
 	padding-top: 10px; 
@@ -181,11 +204,101 @@ p{
 #rightjobs{
 	height: 400px;
 }
+#rightcontacts{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	padding: 0;
+}
+
+#rightcontacts-input{
+	display: flex;
+	flex-direction: column;
+	background: rgb(232,232,232);
+	
+	width: 100%;
+}
+
+#plese{
+	background: rgb(21,135,215);
+	padding: 10px;
+	color: white;
+	text-align: center;
+}
+
+#company{
+	padding-top: 10px;
+	text-align: center;
+}
+
+
+#name, #phone ,#wechat, #hometown{
+	padding: 10px;
+	color: #808080;
+	border: none;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+#send{
+	margin-top: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%; 
+	background: rgb(21,135,215); 
+	border: none;
+	color: white;
+	font-size: 16px;
+}
+
+
+#qrcode{
+	background: white; 
+	display: inline-block; 
+	padding-bottom: 15px; 
+	border-bottom: 2px lightgray solid;
+	text-align: center; 
+	vertical-align: top;
+	margin-top: 30px;
+	
+	width: 100%;
+}
+
+
+#reminder{
+	background: white; 
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;  /*因为是竖直方向布局，所以align-items指水平方向*/
+	
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#reminder-content{
+	padding-top: 5px;
+}
+
+
+
+#map{
+	width: 100%;
+	height: 300px;
+}
+
+#rightaddress-adress{
+	margin-top: 20px;
+}
+
 
 /*大于550px*/
 @media only screen and (min-width: 550px){
 	#rightWelcome{
-		 animation:myfirst 10s;
+		animation:myfirst 10s;
 	    -webkit-animation:myfirst 10s;
 	    animation-fill-mode: forwards;
 	}
@@ -199,58 +312,6 @@ p{
 }
 
 
-
-/*大于550px*/
-@media only screen and (min-width: 550px){
-	#map{
-		width: 50%;
-		height: 400px;
-		display: inline-block;
-	}
-	
-	#rightaddress-sp{
-		width: 3%;
-		height: 400px;
-		display: inline-block;
-	}
-	
-	#rightaddress-adress{
-		width: 42%;
-		padding-bottom: 0px;
-		padding-left: 5px;
-		border-width: 1px;
-		border-color: gray;
-		border-style: solid;
-		display: inline-block; 
-		vertical-align: bottom;
-	}
-}
-
-/*小于550px*/
-@media only screen and (max-width: 550px){
-	#map{
-		width: 100%;
-		height: 400px;
-		display: block;
-	}
-	
-	#rightaddress-sp{
-		width: 100%;
-		height: 8px;
-		display: block;
-	}
-	
-	#rightaddress-adress{
-		width: 100%;
-		border-width: 1px;
-		border-color: gray;
-		border-style: solid;
-		display: block; 
-		
-		margin-top: 10px;
-	}
-	
-}
 
 
 
